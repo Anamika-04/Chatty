@@ -1,0 +1,28 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Chatty</h1>
+    <p class="lead">Chatty is a web application for chatting globally with everyone as well as one-on-one with your friends!</p>
+    <p><a href="{% url 'login' %}" class="btn btn-primary btn-large">Start chatting &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Smooth Chatting Experience</h2>
+        <p>
+            Chatty gives you a smooth, free, realtime chatting experience to connect with your friends and peers!
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Connect with people globally</h2>
+        <p>You can easily connect with peers and hop in on trendy discussions with people from all over the world using Chatty!</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Chat one-on-one with friends <small title="This feature is currently under development" class="btn btn-warning" style="padding: 2px; padding-left: 4px; padding-right: 4px">Coming soon!</small></h2>
+        <p>You can keep your conversations private by chatting 1:1 with your friends!</p>
+    </div>
+</div>
+
+{% endblock %}

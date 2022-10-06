@@ -1,0 +1,30 @@
+{% extends "app/layout.html" %}
+{% load socialaccount %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8">
+        <div>
+            {% if user.is_authenticated %}
+            <h4>Welcome, {{ user.username }} !</h4>
+            {% else %}
+            <h1>Log in here!</h1>
+            <hr />
+            <a href="{% provider_login_url 'google' %}">Login with Google</a>
+            {% endif %}
+        </div>
+       
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+{% load staticfiles %}
+<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+
+{% endblock %}
